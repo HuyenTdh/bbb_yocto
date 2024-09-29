@@ -48,8 +48,22 @@ else
 	echo "${CONFLINE} already exists in the local.conf file"
 fi
 
+CONFLINE="IMAGE_INSTALL:append = \" led-control\""
+
+cat conf/local.conf | grep "${CONFLINE}" > /dev/null
+local_conf_info=$?
+
+if [ $local_conf_info -ne 0 ];then
+	echo "Append ${CONFLINE} in the local.conf file"
+	echo ${CONFLINE} >> conf/local.conf
+	
+else
+	echo "${CONFLINE} already exists in the local.conf file"
+fi
+
 bitbake-layers add-layer ../meta-meta-openembedded/meta*
 bitbake-layers add-layer ../meta-beagleboard/meta-beagleboard-extras
+bitbake-layers add-layer ../meta-aesd
 
 set -e
 bitbake core-image-minimal
