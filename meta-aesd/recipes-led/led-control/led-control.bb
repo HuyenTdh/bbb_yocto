@@ -14,4 +14,4 @@ EXTRA_OEMAKE += "KERNELDIR=${STAGING_KERNEL_DIR}"
 
 SRC_URI = "git://git@github.com/HuyenTdh/LED_control.git;protocol=ssh;branch=gpio_interrupt"
 PV = "1.0+git${SRCPV}"
-SRCREV = "8b356bd625a93488dca61a40fc7f3c635133184e"
+SRCREV = "113899619d4eab0acb1253346803e47bcc969e4b"
