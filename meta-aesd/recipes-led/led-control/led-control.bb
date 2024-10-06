@@ -12,6 +12,6 @@ INITSCRIPT_PACKAGES = "${PN}"
 EXTRA_OEMAKE:append:task-compile = " -C ${STAGING_KERNEL_DIR} M=${S}"
 EXTRA_OEMAKE += "KERNELDIR=${STAGING_KERNEL_DIR}"
 
-SRC_URI = "git://git@github.com/HuyenTdh/LED_control.git;protocol=ssh;branch=gpio_interrupt"
+SRC_URI = "git://git@github.com/HuyenTdh/LED_control.git;protocol=ssh;branch=main"
 PV = "1.0+git${SRCPV}"
-SRCREV = "113899619d4eab0acb1253346803e47bcc969e4b"
+SRCREV = "bc48bb433a64f6fe80688f3a208e68afba2a274d"
